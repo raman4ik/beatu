@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    color: #000000;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+header .navigation li a:hover {
+    color: red;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    max-height: 70vh;
+}
+
+.banner__content {
+    position: absolute;
+    max-width: 600px;
+    padding-right: 100px;
+}
+
+.banner__content-description {
+    padding-bottom: 20px;
+}
+
+.banner__buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner__btn {
+    text-decoration: none;
+    border: 3px solid black;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    color: black;
+    transition: 0.5s;
+}
+
+.banner__btn:hover {
+    box-shadow: 0px 3px 24px black;
+}
+
+.recent__product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.recent__title {
+    margin-bottom: 10px;
+}
+
+.line {
+    padding-top: 5px;
+    width: 40px;
+    height: 20px;
+    border-top: 4px solid yellow;
+}
+
+.recent__sub-title {
+    max-width: 550px;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 20px 20px 20px;
+}
+
+.product__card {
+    position: relative;
+    max-width: 200px;
+    margin: 30px;
+}
+
+.product__image {
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.product__image img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.product__title h2 {
+    font-size: 15px;
+}
+
+.product__sub-title p {
+    font-size: 10px;
+}
+
+.product__image .image-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #03a9f4, rgba(3, 169, 244, 0.5));
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.product__image:hover .image-content {
+    opacity: 1;
+}
+
+.advertising {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+}
+
+.advertising__baner-top {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.advertising__limited {
+    margin-right: 20px;
+}
+
+.advertising__limited img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.sale-banner img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.sale-hair img {
+    max-height: 400px;
+    max-width: 1030px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: url(../img/footer.png);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .container .sec {
+    margin-left: 30px;
+}
+
+footer .container .sec.aboutus {
+    width: 40%;
+}
+
+footer .container h2 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .container h2::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+
+footer p {
+    color: rgb(0, 0, 0);
+}
+
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sci li a:hover {
+    background: #f00;
+}
+
+.sci li a .fa {
+    color: #fff;
+    font-size: 20px;
+}
+
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+
+.quickLinks ul li {
+    list-style: none;
+}
+
+.quickLinks ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.quickLinks ul li a:hover {
+    color: red;
+}
+
+.contact {
+    width: calc(30% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info {
+    position: relative;
+}
+
+.contact .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1) {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li span {
+    color: rgb(0, 0, 0);
+}
+
+.contact .info li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.contact .info li a:hover {
+    color: red;
+}
+
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    footer .container .sec.aboutus,
+    .quickLinks,
+    .contact {
+        width: 100%;
+    }
+}
