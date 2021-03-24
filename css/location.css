@@ -5,8 +5,11 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
+
 body {
-	font-family: "Poppins", sans-serif;
+	background: black;
+	font-family: Arial, Helvetica, sans-serif;
+	background-size: cover;
 }
 
 .logo {
@@ -15,146 +18,71 @@ body {
 	padding: 3px;
 	background: rgb(133, 144, 3);
 }
+/*---------------*/
 
-p {
-	font-weight: 300;
-	color: #111;
-}
-
-.header__logo-name {
+/*---Sticky---*/
+.grad {
 	color: #fff;
 	background: linear-gradient(300deg, black 50%, gold 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
-.content__title {
-	color: #fff;
-	background: linear-gradient(300deg, black 50%, gold 50%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.header__logo-sub-mame {
+.gradD {
 	font-size: 20px;
 }
-.banner {
-	position: relative;
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: url(../img/fon-2.jpg);
-	background-size: cover;
-}
-.banner .content {
-	position: relative;
-	top: -20px;
-	max-width: 900px;
-	text-align: center;
-	transition: 1s;
-}
-.banner .content h2 {
-	font-size: 5em;
-	color: rgb(238, 22, 22);
-}
-.banner .content p {
-	font-size: 2em;
-	color: white;
-	font-style: inherit;
-	font-weight: 700;
-}
-.banner .content .better {
-	color: red;
-	font-style: inherit;
-	font-weight: 700;
-}
-.btn {
-	position: relative;
-	display: inline-block;
-	width: 160px;
-	height: 50px;
-	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
-}
-
-.btn span {
-	position: absolute;
-	top: 20px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	color: #000000;
-	font-weight: 700;
-	background: gold;
-	display: flex;
-	align-items: center;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 18px;
-}
-
-.btn span:nth-child(2) {
-	color: gold;
-	background: black;
-	overflow: hidden;
-	z-index: 2;
-	transition: 0.5s;
-	clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
-}
-
-.btn span:nth-child(2):hover {
-	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
-	letter-spacing: 4px;
-}
-.btn span:nth-child(1):hover ~ span:nth-child(2) {
-	clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
-	letter-spacing: 4px;
-}
-
 .header-top {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 40px 100px;
+	padding: 10px 0px;
+	padding: 25px 100px;
 	z-index: 10000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	transition: 0.5s;
 }
+
 .header-top.sticky {
 	background: #fff;
 	padding: 10px 100px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
+
 .header-top .logo {
 	color: #fff;
 	font-weight: 700;
 	font-size: 2em;
 	text-decoration: none;
 }
+
 .header-top.sticky .logo {
 	color: #111;
 }
+
 .header-top .logo span {
 	color: #ff0157;
 }
+
 .header-top .navigation {
 	position: relative;
+	top: 0px;
 	display: flex;
 }
+
 .header-top .navigation li {
 	list-style: none;
 	margin-left: 30px;
 }
+
 .header-top .navigation li a {
 	text-decoration: none;
 	color: #fff;
 	font-weight: 300;
 }
+
 .header-top.sticky .navigation li a {
 	color: #111;
 }
@@ -167,26 +95,24 @@ p {
 	.logo {
 		border: 4px solid rgb(180, 159, 40);
 		background: rgb(133, 144, 3);
-		padding: 1px 5px;
 	}
-	.header__logo-sub-mame {
+	.gradD {
 		font-size: 14px;
-	}
-	body.lock {
-		overflow: hidden;
 	}
 	.header-top,
 	.header-top.sticky {
 		padding: 10px 20px;
 	}
+
 	.header-top .navigation {
 		display: none;
 	}
+
 	.header-top .navigation.active {
 		width: 100%;
 		height: 100%;
 		position: fixed;
-		top: 70px;
+		top: 68px;
 		left: 0;
 		display: flex;
 		justify-content: center;
@@ -194,15 +120,18 @@ p {
 		flex-direction: column;
 		background: #fff;
 	}
+
 	.header-top .navigation li {
 		margin-left: 0;
 	}
+
 	.header-top .navigation li a {
 		text-decoration: none;
 		color: #111;
 		font-size: 1.6em;
 		font-weight: 300;
 	}
+
 	.menuToggle {
 		position: relative;
 		width: 40px;
@@ -213,33 +142,26 @@ p {
 		background-position: center;
 		cursor: pointer;
 	}
+
 	.menuToggle.active {
 		background: url(../img/close.png);
 		background-size: 25px;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+
 	.header-top.sticky .menuToggle {
 		filter: invert(1);
 	}
+
 	.banner .content h2 {
-		font-size: 3.4em;
-		color: rgb(238, 4, 4);
-	}
-	.banner .content p {
-		font-size: 1.3em;
-	}
-
-	.btn {
-		width: 120px;
-		height: 40px;
-	}
-
-	.btn span {
-		font-size: 13px;
+		font-size: 3em;
+		color: #fff;
 	}
 }
+/*---Center----*/
 
+/*---Footer---*/
 footer {
 	position: relative;
 	width: 100%;
@@ -250,24 +172,29 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
 footer .container {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	flex-direction: row;
 }
+
 footer .container .sec {
 	margin-left: 30px;
 }
+
 footer .container .sec.aboutus {
 	width: 40%;
 }
+
 footer .container h2 {
 	position: relative;
 	color: #fff;
 	font-weight: 500;
 	margin-bottom: 15px;
 }
+
 footer .container h2::before {
 	content: "";
 	position: absolute;
@@ -277,16 +204,20 @@ footer .container h2::before {
 	height: 2px;
 	background: #f00;
 }
+
 footer p {
 	color: #999;
 }
+
 .sci {
 	margin-top: 20px;
 	display: flex;
 }
+
 .sci li {
 	list-style: none;
 }
+
 .sci li a {
 	display: inline-block;
 	width: 40px;
@@ -299,83 +230,86 @@ footer p {
 	text-decoration: none;
 	border-radius: 4px;
 }
+
 .sci li a:hover {
 	background: #f00;
 }
+
 .sci li a .fa {
 	color: #fff;
 	font-size: 20px;
 }
+
 .quickLinks {
 	position: relative;
 	width: 25%;
 }
+
 .quickLinks ul li {
 	list-style: none;
 }
+
 .quickLinks ul li a {
 	color: #999;
 	text-decoration: none;
 	margin-bottom: 10px;
 	display: inline-block;
 }
+
 .quickLinks ul li a:hover {
 	color: #fff;
 }
+
 .contact {
 	width: calc(30% - 60px);
 	margin-right: 0 !important;
 }
+
 .contact .info {
 	position: relative;
 }
+
 .contact .info li {
 	display: flex;
 	margin-bottom: 16px;
 }
+
 .contact .info li span:nth-child(1) {
 	color: #fff;
 	font-size: 20px;
 	margin-right: 10px;
 }
+
 .contact .info li span {
 	color: #999;
 }
+
 .contact .info li a {
 	color: #999;
 	text-decoration: none;
 }
+
 .contact .info li a:hover {
 	color: #fff;
 }
+
 @media (max-width: 991px) {
 	footer {
 		padding: 40px;
 	}
+
 	footer .container {
 		flex-direction: column;
 	}
+
 	footer .container .sec {
 		margin-right: 0;
 		margin-bottom: 40px;
 	}
+
 	footer .container .sec.aboutus,
 	.quickLinks,
 	.contact {
 		width: 100%;
 	}
-}
-
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-::-webkit-scrollbar-track {
-	background: rgb(87, 86, 86);
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.001) inset;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #ccc;
-	border-radius: 70px;
 }
