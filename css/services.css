@@ -551,7 +551,7 @@ header .navigation li a:hover {
     }
 
     .text {
-        font-size: 23px;
+        font-size: 20px;
         padding: 0px 10px 0px 10px;
     }
 
@@ -563,7 +563,7 @@ header .navigation li a:hover {
         padding: 0;
     }
     .service__info li {
-        font-size: 20px;
+        font-size: 23px;
         list-style: none;
         margin-bottom: 14px;
     }
