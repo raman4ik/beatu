@@ -3,20 +3,18 @@ new Swiper('.image-slider', {
         el: '.swiper-pagination',
         clickable: true,
         dynamicBullets: true,
-
     },
 
-
+    speed: 2400,
     grabCursor: true,
-    autoHeight: true,
-    loop: true,
-    simulateTouch: false,
+    loop: false,
+    parallax: true,
+    slidesPerView: 1,
 
-    autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false
-    }
+    mousewheel: {
+        invert: false
+    },
+
 
 
 })

@@ -53,7 +53,7 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 40px 100px;
+	padding: 25px 100px;
 	z-index: 10000;
 	display: flex;
 	justify-content: space-between;
@@ -63,7 +63,7 @@ header {
 
 header.sticky {
 	background: #fff;
-	padding: 10px 100px;
+	padding: 10px 30px;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
